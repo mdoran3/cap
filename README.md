@@ -33,6 +33,20 @@ A small React + Vite app that takes a website URL and a few options, then uses t
 2. Optionally fill in the other attributes, or leave them blank for the defaults.
 3. Click **Take that Pic!**. The screenshot appears below the form.
 
+## Screenshots
+
+### Inputs
+
+![Inputs](src/assets/screenshots/inputs.png)
+
+### Result
+
+![Result](src/assets/screenshots/result.png)
+
+### Gallery
+
+![Gallery](src/assets/screenshots/gallery.png)
+
 ## Project structure
 
 - [src/App.jsx](src/App.jsx): state, query building (`submitForm`, `makeQuery`), the API call (`callAPI`), and screenshot display
