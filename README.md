@@ -1,16 +1,52 @@
-# React + Vite
+# Build Your Own Screenshot! 📸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Vite app that takes a website URL and a few options, then uses the [ApiFlash](https://apiflash.com/) API to capture and display a screenshot of that site.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Form to set the screenshot attributes: `url`, `format`, `no_ads`, `no_cookie_banners`, `width`, `height`
+- Blank fields fall back to defaults (`jpeg`, `true`, `true`, `1920`, `1080`)
+- Live "Current Query Status" panel that mirrors your inputs as you type
+- Alerts when the URL is missing or the API returns no screenshot
+- Displays the returned screenshot and clears the form after a successful call
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```
+   npm install
+   ```
+2. Create an account at [apiflash.com](https://apiflash.com/) and copy your access key.
+3. Create a `.env` file in the project root (next to `package.json`):
+   ```
+   VITE_APP_ACCESS_KEY=your_apiflash_key
+   ```
+   Don't commit this file. Make sure `.env` is listed in `.gitignore`.
+4. Start the dev server (restart it any time you change `.env`):
+   ```
+   npm run dev
+   ```
 
-## Expanding the ESLint configuration
+## Usage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Enter a URL **without** the protocol, e.g. `example.com`.
+2. Optionally fill in the other attributes, or leave them blank for the defaults.
+3. Click **Take that Pic!**. The screenshot appears below the form.
+
+## Project structure
+
+- [src/App.jsx](src/App.jsx): state, query building (`submitForm`, `makeQuery`), the API call (`callAPI`), and screenshot display
+- [src/components/APIForm.jsx](src/components/APIForm.jsx): the input form and submit button
+
+## Scripts
+
+| Command           | Description                  |
+| ----------------- | ---------------------------- |
+| `npm run dev`     | Start the dev server         |
+| `npm run build`   | Build for production         |
+| `npm run preview` | Preview the production build |
+| `npm run lint`    | Run ESLint                   |
+
+## Built with
+
+React 19, Vite, ApiFlash
