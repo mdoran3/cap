@@ -49,9 +49,9 @@ A small React + Vite app that takes a website URL and a few options, then uses t
 
 ## Demo Walkthrough
 
-[![Demo walkthrough](https://img.youtube.com/vi/jZlGQEf5jz0/maxresdefault.jpg)](https://youtu.be/jZlGQEf5jz0)
+![Demo walkthrough](src/assets/cap_demo.gif)
 
-[Watch on YouTube](https://youtu.be/jZlGQEf5jz0)
+[Watch the full-quality version on YouTube](https://youtu.be/jZlGQEf5jz0)
 
 ## Project structure
 
