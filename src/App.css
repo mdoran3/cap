@@ -186,3 +186,121 @@
     border-right-color: var(--border);
   }
 }
+
+/* ---- Screenshot app layout ---- */
+.whole-page {
+  --chartreuse: #7fff00;
+  --chartreuse-text: #4d8f00;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 24px 32px;
+  text-align: left;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.whole-page > div:first-of-type {
+  background: var(--social-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 16px 0 24px;
+  padding: 0;
+  text-align: left;
+}
+
+.form {
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+
+  h2 {
+    font-size: 18px;
+    font-family: var(--mono);
+    color: var(--chartreuse-text);
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 135%;
+  }
+}
+
+.textbox {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  &:focus-visible {
+    outline: 2px solid var(--chartreuse);
+    outline-offset: 1px;
+  }
+}
+
+.button {
+  font: inherit;
+  font-weight: 500;
+  color: #08060d;
+  background: var(--chartreuse);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.1s;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.screenshot {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.container {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-family: var(--mono);
+  font-size: 14px;
+  word-break: break-all;
+
+  h3 {
+    margin: 0 0 12px;
+    font-family: var(--heading);
+    color: var(--text-h);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .whole-page {
+    --chartreuse-text: #7fff00;
+  }
+}
