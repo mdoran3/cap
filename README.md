@@ -47,6 +47,10 @@ A small React + Vite app that takes a website URL and a few options, then uses t
 
 ![Gallery](src/assets/screenshots/gallery.png)
 
+## Demo Walkthrough
+
+[Watch the demo (cap_demo.mov)](src/assets/cap_demo.mov)
+
 ## Project structure
 
 - [src/App.jsx](src/App.jsx): state, query building (`submitForm`, `makeQuery`), the API call (`callAPI`), and screenshot display
